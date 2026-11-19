@@ -43,22 +43,3 @@ Open a `.jff` in JFLAP 7.1 or compatible version. Conversion results, parse tabl
 | 29 | **Unrestricted Grammar** — `29_unrestricted_grammar.jff` | Existing grammar is a constructed candidate intended to illustrate a non-context-free language; it does not match the cited official module exercise. | [Official JFLAP Unrestricted Grammars module](https://jflap.org/modules/ConvertedFiles/Unrestricted%20Grammar%20Module.pdf) | Unverified; grammar retained with source mismatch disclosed. |
 | 30 | **L-System Simple** — `30_lsystem_simple.jff` | Axiom S, production S→g+S as specified by the cited drawing exercise. | [Martha Kosa, Simple L System Exercise 3](https://www.jflap.org/modules/ConvertedFiles/L-System%20Simple%20Exercise3.pdf) | Implemented from stated axiom/rule; drawing interpretation not GUI-tested. |
 
-## Source and scope notes
-
-- Project 01 follows the formal language and diagram; the exercise prose lists `abbbbaa` as accepted even though it has only two trailing `a` symbols. This model follows the stated minimum of three trailing `a` symbols and rejects that example.
-- Project 03 keeps the recovered candidate NFA because the candidate does not match the audited four-state exercise and the available audit does not transcribe its individual transitions.
-- Project 05 keeps the available illustrative DFA because the cited source figure/JFF could not be recovered.
-- Project 10 includes only the DFA for `(xy)*x`; build the DFA for `x(yx)*` separately and use **Test → Compare Equivalence**.
-- Project 15 follows the recovered Moore transitions; the original problem screenshot could not be inspected.
-- Project 18 contains the source NPDA; it does not include the converter-normalized version or resulting CFG.
-- Project 19 contains the source CFG as conversion input; generate the NPDA in JFLAP. Its legacy filename mentions balanced parentheses, but the model follows the audited book exercise.
-- Project 21 uses a constructed singleton-string grammar because the original production text was illegible.
-- Project 22 deliberately keeps the erroneous proposed grammar to demonstrate debugging; it is not meant to generate the intended language correctly.
-- Projects 26–28 retain the supplied candidate machine structures but are not faithful implementations of the audited tasks. Project 26 does not decide `{wcw}`, Project 27 does not compare the reverse portion, and Project 28 contains only a scan-right component.
-- Project 29 retains a candidate unrestricted grammar, but its relation to the cited official module has not been established.
-
-## Verification record
-
-The rebuilt ZIP was checked for ZIP integrity, one root directory, exactly 31 repository files (30 `.jff` plus this README), XML parsing for every `.jff`, and valid transition state references. These checks establish archive/XML structure only.
-
-Representative behavior checks were run against projects 01, 02, 04, 06, 11, 12, 17, 20, 21, 22, and 23; the Mealy example in project 14 was checked against the source sample. No JFLAP GUI testing was performed. Projects marked partial or unverified must not be treated as functionally validated.
